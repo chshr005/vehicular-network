@@ -7,7 +7,7 @@ s.connect((HOST,PORT))
 
 #Lets loop awaiting for your input
 while True:
-	command = raw_input('Enter your command: ')
+	command = input('Enter your command: ')
 	s.send(command)
 	reply = s.recv(1024)
 	if reply == 'Terminate':
