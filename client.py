@@ -10,7 +10,7 @@ while True:
 	command = input('Enter your command: ')
 	s.send(command.encode())
 	reply = s.recv(1024)
-	reply = reply.decode()
-	if reply == 'Terminate':
+	reply1 = reply.decode()
+	if reply1 == 'Terminate':
 		break
-		print(reply)
+		print(reply1)
