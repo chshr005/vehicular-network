@@ -14,4 +14,4 @@ while True:
 	reply1 = reply.decode()
 	if reply1 == 'Terminate':
 		break
-		print(reply1)
+	print(reply1)
