@@ -12,4 +12,4 @@ while True:
 	reply = s.recv(1024)
 	if reply == 'Terminate':
 		break
-    print reply
+		print(reply)
