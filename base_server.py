@@ -15,7 +15,7 @@ except socket.error:
 if flag == 1:
     try:
         s.bind((HOST, PORT2))
-        print('Connected on port 1')
+        print('Connected on port 2')
     except socket.error:
         print('Bind failed on port 2 \n Exiting'); exit()
 
