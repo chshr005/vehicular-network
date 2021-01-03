@@ -29,7 +29,7 @@ print ('Connected')
 # awaiting for message
 while True:
 	data = conn.recv(1024)
-	print ('I sent a message back in response to: '+ data.decode())
+	print ('Data recieved: '+ data.decode())
 	data1=data.decode()
 	reply = ''
 
