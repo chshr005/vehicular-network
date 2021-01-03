@@ -6,17 +6,17 @@ PORT2 = 33002
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print ('Socket created')
 
+flag = 0
 #managing error exception
 try:
 	s.bind((HOST, PORT))
 except socket.error:
-	print ('Bind failed on port 1')
-try:
-    s.bind((HOST, PORT2))
-except socket.error:
-    print('Bind failed on port 2')
-    print('Exiting...')
-    exit()
+	print ('Bind failed on port 1'); flag = 1
+if flag == 1:
+    try:
+        s.bind((HOST, PORT2))
+    except socket.error:
+        print('Bind failed on port 2 \n Exiting'); exit()
 
 
 s.listen(5)

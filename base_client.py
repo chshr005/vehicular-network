@@ -6,15 +6,17 @@ HOST = '10.35.70.12'      #'10.35.70.29' # Enter IP or Hostname of your server
 PORT = 33001 # Pick an open Port (1000+ recommended), must match the server port
 PORT2 = 33002
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+flag = 0
 try:
 	s.connect((HOST,PORT))
-except socket.error:
-	print('Connection refused on port 1')
+except:
+	print('Connection failed on port 1'); flag = 1
+
+if flag == 0:
 	try:
 		s.connect(HOST, PORT2)
-	except socket.error:
-		print('Connection refused on port 2')
-		print('Exiting...')
+	except:
+		print('Connection failed on port 2 \n Exiting'); exit()
 
 #Lets loop awaiting for your input
 while True:
