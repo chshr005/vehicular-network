@@ -2,6 +2,7 @@ import socket
 import json
 import math
 from Dijkstra import Dijkstra
+import time
 
 HOST = '10.35.70.12' # Server IP or Hostname
 PORT = 33001 # Pick an open Port (1000+ recommended), must match the client sport
@@ -33,6 +34,7 @@ print ('Connected')
 # awaiting for message
 while True:
     data = conn.recv(1024)
+    # data = b'{"id": "Sensor_data", "fuel": 7.153023857845497, "x": -24, "y": 0, "speed": 97}'
     print ('Data recieved: '+ data.decode())
     data1=data.decode()
     reply = ''
@@ -56,7 +58,8 @@ while True:
     dist3 = math.sqrt((x2 - x)*(x2 - x) + (y2 - y)*(y2 - y))
     name2 = 'car2'
     graph = {'base':{name:dist, name2:dist2}, name:{'base':dist, name2: dist3}, name2:{'base':dist2, name:dist3}}
-    Dijkstra(graph, 'name','base')
+    Dijkstra(graph, name,'base')
 	# Sending reply
 	# conn.send(reply.encode())
+    time.sleep(50)
 conn.close() # Close connections
