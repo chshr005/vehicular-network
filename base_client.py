@@ -13,7 +13,7 @@ while True:
 	print(data)
 	time.sleep(5)
 	# command = input('Enter your command: ')
-	s.send(command.encode())
+	s.send(data.encode())
 	reply = s.recv(1024)
 	print(reply)
 	reply1 = reply.decode()
