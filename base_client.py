@@ -9,9 +9,9 @@ s.connect((HOST,PORT))
 
 #Lets loop awaiting for your input
 while True:
-    data = SensorData.gen_sensor_data()
-    print(data)
-    time.sleep(5)
+	data = SensorData.gen_sensor_data()
+	print(data)
+	time.sleep(5)
 	# command = input('Enter your command: ')
 	s.send(command.encode())
 	reply = s.recv(1024)
