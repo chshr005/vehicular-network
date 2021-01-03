@@ -92,6 +92,6 @@ def Dijkstra(graph,source,target):
     #from source to every other node
     # print(shortest_distance)
 
-graph = {'base_station':{'car1':5,'car2':2},'car1':{'base_station':5,'car2':4}, 'car2':{'base_station':-1, 'car1':4}}
-# Calling the function with source as 'a' and target as 'e'.
-Dijkstra(graph,'car2','base_station')
+# graph = {'base_station':{'car1':5,'car2':2},'car1':{'base_station':5,'car2':4}, 'car2':{'base_station':-1, 'car1':4}}
+# # Calling the function with source as 'a' and target as 'e'.
+# Dijkstra(graph,'car2','base_station')

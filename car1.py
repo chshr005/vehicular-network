@@ -28,4 +28,4 @@ while True:
     if reply1 == 'Sensor data not uniform':
         break
     # print(reply1)
-    time.sleep(5)
+    time.sleep(2)
