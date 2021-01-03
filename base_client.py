@@ -11,12 +11,12 @@ s.connect((HOST,PORT))
 while True:
 	data = SensorData.gen_sensor_data()
 	print(data)
-	time.sleep(5)
 	# command = input('Enter your command: ')
 	s.send(data.encode())
 	reply = s.recv(1024)
-	print(reply)
+	# print(reply)
 	reply1 = reply.decode()
 	if reply1 == 'Sensor data not uniform':
 		break
 	print(reply1)
+	time.sleep(5)
