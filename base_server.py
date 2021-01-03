@@ -2,6 +2,7 @@ import socket
 
 HOST = '10.35.70.12' # Server IP or Hostname
 PORT = 33001 # Pick an open Port (1000+ recommended), must match the client sport
+PORT2 = 33002
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print ('Socket created')
 
@@ -9,7 +10,14 @@ print ('Socket created')
 try:
 	s.bind((HOST, PORT))
 except socket.error:
-	print ('Bind failed ')
+	print ('Bind failed on port 1')
+    try:
+        s.bind(HOST, PORT2)
+    except socket.error:
+        print('Bind failed on port 2')
+        print('Exiting...')
+        exit()
+        
 
 s.listen(5)
 print ('Socket awaiting messages')
