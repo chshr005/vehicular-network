@@ -7,18 +7,20 @@ PORT = 33001 # Pick an open Port (1000+ recommended), must match the server port
 PORT2 = 33002
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 flag = 0
-try:
-	s.connect((HOST,PORT))
-	print('Connected on port 1')
-except:
-	print('Connection failed on port 1'); flag = 1
+s.connect((HOST, PORT))
 
-if flag == 1:
-	try:
-		s.connect(HOST, PORT2)
-		print('Connected on port 2')
-	except:
-		print('Connection failed on port 2 \n Exiting'); exit()
+# try:
+# 	s.connect((HOST,PORT))
+# 	print('Connected on port 1')
+# except:
+# 	print('Connection failed on port 1'); flag = 1
+
+# if flag == 1:
+# 	try:
+# 		s.connect(HOST, PORT2)
+# 		print('Connected on port 2')
+# 	except:
+# 		print('Connection failed on port 2 \n Exiting'); exit()
 
 #Lets loop awaiting for your input
 while True:

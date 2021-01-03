@@ -7,17 +7,19 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print ('Socket created')
 
 flag = 0
+s.connect((HOST, PORT))
+
 #managing error exception
-try:
-	s.bind((HOST, PORT))
-except socket.error:
-	print ('Bind failed on port 1'); flag = 1
-if flag == 1:
-    try:
-        s.bind((HOST, PORT2))
-        print('Connected on port 2')
-    except socket.error:
-        print('Bind failed on port 2 \n Exiting'); exit()
+# try:
+# 	s.bind((HOST, PORT))
+# except socket.error:
+# 	print ('Bind failed on port 1'); flag = 1
+# if flag == 1:
+#     try:
+#         s.bind((HOST, PORT2))
+#         print('Connected on port 2')
+#     except socket.error:
+#         print('Bind failed on port 2 \n Exiting'); exit()
 
 
 s.listen(5)
