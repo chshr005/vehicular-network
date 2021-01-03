@@ -61,5 +61,4 @@ while True:
     Dijkstra(graph, name,'base')
 	# Sending reply
 	# conn.send(reply.encode())
-    time.sleep(50)
 conn.close() # Close connections
