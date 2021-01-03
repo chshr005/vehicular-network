@@ -12,7 +12,7 @@ try:
 except:
 	print('Connection failed on port 1'); flag = 1
 
-if flag == 0:
+if flag == 1:
 	try:
 		s.connect(HOST, PORT2)
 	except:
