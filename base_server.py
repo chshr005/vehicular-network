@@ -33,17 +33,16 @@ print ('Connected')
 # awaiting for message
 while True:
 	data = conn.recv(1024)
-	print ('Data recieved: '+ data.decode())
-	data1=data.decode()
-	reply = ''
+    print ('Data recieved: '+ data.decode())
+    data1=data.decode()
+    reply = ''
 
-	# process your message
-	if data1 != ''  or data1!='{}':
-		reply = 'Data recieve acknowledged'
-	
-	else:
-		reply = 'Sensor data not uniform'
-    
+    # process your message
+    if data1 != ''  or data1!='{}':
+    	reply = 'Data recieve acknowledged'
+    else:
+    	reply = 'Sensor data not uniform'
+
     json_dict = json.loads(data1)
     name = json_dict['id']
     x = json_dict['x']
