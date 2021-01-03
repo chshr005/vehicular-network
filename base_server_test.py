@@ -10,7 +10,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print ('Socket created')
 
 flag = 0
-s.bind((HOST, PORT))
+s.bind((HOST, PORT2))
 #managing error exception
 # try:
 # 	s.bind((HOST, PORT))
