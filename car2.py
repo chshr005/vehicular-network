@@ -8,7 +8,7 @@ PORT = 33001
 PORT2 = 33002
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # flag = 0
-s.connect((HOST, PORT))
+s.connect((HOST, PORT2))
 
 
 
