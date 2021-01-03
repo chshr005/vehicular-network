@@ -20,8 +20,8 @@ while True:
     json_dict['id'] = 'CAR2'
     data = json.dumps(json_dict)
     print(data)
-	s.send(data.encode())
-	reply = s.recv(1024)
+    s.send(data.encode())
+    reply = s.recv(1024)
 	# print(reply)
     # reply = b'sadas'
     reply1 = reply.decode()
