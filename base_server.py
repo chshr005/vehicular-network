@@ -11,12 +11,12 @@ try:
 	s.bind((HOST, PORT))
 except socket.error:
 	print ('Bind failed on port 1')
-    try:
-        s.bind(HOST, PORT2)
-    except socket.error:
-        print('Bind failed on port 2')
-        print('Exiting...')
-        exit()
+try:
+    s.bind((HOST, PORT2))
+except socket.error:
+    print('Bind failed on port 2')
+    print('Exiting...')
+    exit()
 
 
 s.listen(5)
