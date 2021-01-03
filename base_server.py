@@ -35,7 +35,7 @@ while True:
 
 	# process your message
 	if data1 != ''  or data1!='{}':
-		reply = 'Data recieved'
+		reply = 'Data recieve acknowledged'
 	# elif data1 == 'This is important':
 	# 	reply = 'OK, I have done the important thing you have asked me!'
 
