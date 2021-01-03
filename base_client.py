@@ -9,12 +9,14 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 flag = 0
 try:
 	s.connect((HOST,PORT))
+	print('Connected on port 1')
 except:
 	print('Connection failed on port 1'); flag = 1
 
 if flag == 1:
 	try:
 		s.connect(HOST, PORT2)
+		print('Connected on port 2')
 	except:
 		print('Connection failed on port 2 \n Exiting'); exit()
 
