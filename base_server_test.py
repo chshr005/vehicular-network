@@ -2,6 +2,9 @@ import socket
 import json
 import math
 from Dijkstra import Dijkstra
+import socket
+import os
+from _thread import *
 
 HOST = '10.35.70.12' # Server IP or Hostname
 PORT = 33001 # Pick an open Port (1000+ recommended), must match the client sport
@@ -41,7 +44,7 @@ print ('Connected')
 
 
 while True:
-    Client, address = ServerSocket.accept()
+    Client, address = s.accept()
     print('Connected to: ' + address[0] + ':' + str(address[1]))
     start_new_thread(threaded_client, (Client, ))
     ThreadCount += 1
@@ -80,4 +83,4 @@ while True:
 	# Sending reply
 	# conn.send(reply.encode())
 # conn.close() # Close connections
-ServerSocket.close()
+s.close()
