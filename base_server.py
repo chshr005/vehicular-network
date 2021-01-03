@@ -53,7 +53,7 @@ while True:
     x2 = 20
     y2 = 10
     dist2 = math.sqrt((x2*x2)+(y2*y2))
-    dist3 = math.sqrt((x2*x2 - x*x) + (y2*y2 - y*y))
+    dist3 = math.sqrt((x2 - x)*(x2 - x) + (y2 - y)*(y2 - y))
     name2 = 'car2'
     graph = {'base':{name:dist, name2:dist2}, name:{'base':dist, name2: dist3}, name2:{'base':dist2, name:dist3}}
     Dijkstra(graph, 'name','base')
