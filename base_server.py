@@ -32,7 +32,7 @@ print ('Connected')
 
 # awaiting for message
 while True:
-	data = conn.recv(1024)
+    data = conn.recv(1024)
     print ('Data recieved: '+ data.decode())
     data1=data.decode()
     reply = ''
