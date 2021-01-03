@@ -23,15 +23,6 @@ s.bind((HOST, PORT))
 #     except socket.error:
 #         print('Bind failed on port 2 \n Exiting'); exit()
 
-def threaded_client(connection):
-    connection.send(str.encode('Welcome to the Server\n'))
-    while True:
-        data = connection.recv(2048)
-        reply = 'Server Says: ' + data.decode('utf-8')
-        if not data:
-            break
-        connection.sendall(str.encode(reply))
-    connection.close()
 
 
 s.listen(5)
@@ -39,30 +30,19 @@ print ('Socket awaiting messages')
 (conn, addr) = s.accept()
 print ('Connected')
 
-
-while True:
-    Client, address = ServerSocket.accept()
-    print('Connected to: ' + address[0] + ':' + str(address[1]))
-    start_new_thread(threaded_client, (Client, ))
-    ThreadCount += 1
-    print('Thread Number: ' + str(ThreadCount))
-ServerSocket.close()
-
-
-
 # awaiting for message
-# while True:
-# 	data = conn.recv(1024)
-# 	print ('Data recieved: '+ data.decode())
-# 	data1=data.decode()
-# 	reply = ''
+while True:
+	data = conn.recv(1024)
+	print ('Data recieved: '+ data.decode())
+	data1=data.decode()
+	reply = ''
 
-# 	# process your message
-# 	if data1 != ''  or data1!='{}':
-# 		reply = 'Data recieve acknowledged'
+	# process your message
+	if data1 != ''  or data1!='{}':
+		reply = 'Data recieve acknowledged'
 	
-# 	else:
-# 		reply = 'Sensor data not uniform'
+	else:
+		reply = 'Sensor data not uniform'
     
     json_dict = json.loads(data1)
     name = json_dict['id']
