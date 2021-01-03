@@ -17,7 +17,7 @@ except socket.error:
         print('Bind failed on port 2')
         print('Exiting...')
         exit()
-        
+
 
 s.listen(5)
 print ('Socket awaiting messages')
