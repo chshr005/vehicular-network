@@ -8,7 +8,8 @@ def call_dijkstra():
     print(lines[len(lines)-1])
     data = lines[len(lines)-1]
     data2 = lines[len(lines)-2]
-
+    data = data.replace('\\','')
+    data2 = data2.replace('\\', '')
     json_dict = json.loads(data)
     print(json_dict['Fuel_data'])
 
