@@ -26,7 +26,7 @@ def multi_client(connection):
         with open('data.txt', 'a+') as outfile:
             json.dump(jsonData, outfile)
             outfile.write("\n")
-        print(reply)
+        # print(reply)
         if not data:
             break
         connection.sendall(str.encode(reply))
