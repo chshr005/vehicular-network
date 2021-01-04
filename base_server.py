@@ -33,7 +33,7 @@ print ('Connected')
 
 # awaiting for message
 while True:
-    print("Start")
+    # print("Start")
     data = conn.recv(1024)
     # data = b'{"id": "Sensor_data", "fuel": 7.153023857845497, "x": -24, "y": 0, "speed": 97}'
     print ('Data recieved: '+ data.decode())

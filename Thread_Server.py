@@ -20,6 +20,8 @@ def multi_client(connection):
     while True:
         data = connection.recv(2048)
         reply = 'Server Says: ' + data.decode('utf-8')
+        with open('data.txt', 'w') as outfile:
+            json.dump(data, outfile)
         print(reply)
         if not data:
             break
