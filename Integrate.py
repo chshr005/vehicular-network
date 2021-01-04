@@ -59,4 +59,4 @@ def call_dijkstra():
         Dijkstra(graph, car, 'base')
     
 # while True:
-#     call_dijkstra()
+    call_dijkstra()
