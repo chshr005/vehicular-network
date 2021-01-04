@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo "Running script..."
-"python3 Thread_Server.py" \;
+python3 Thread_Server.py
 
  
