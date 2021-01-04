@@ -45,7 +45,7 @@ def call_dijkstra():
 
 
     graph = {'base':{name:dist, name2:dist2}, name:{'base':dist, name2: dist3}, name2:{'base':dist2, name:dist3}}
-
+    car = name
     if flag ==1:
         car= name
         print(name, ' not in range')
