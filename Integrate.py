@@ -28,11 +28,13 @@ def call_dijkstra():
     dist = json_dict['Proximity']
     dist2 = json_dict2['Proximity']
     dist3 = round(float(dist2))-round(float(dist))
+    dist = round(float(dist))
+    dist2 = round(float(dist2))
 
-    if round(float(dist)) > 30:
+    if dist > 30:
         dist = -1
         flag =1
-    if round(float(dist2)) > 30:
+    if dist2 > 30:
         dist2 = -1
         if flag == 1:
             flag =12
