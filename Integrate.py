@@ -5,13 +5,16 @@ def call_dijkstra():
     with open('data.txt', 'r') as reader:
         lines = reader.readlines()
 
-    print(lines[len(lines)-1])
+    # print(lines[len(lines)-1])
     data = lines[len(lines)-1]
     data2 = lines[len(lines)-2]
     data = data.replace('\\','')
     data2 = data2.replace('\\', '')
+
+    print(data)
+    print(data2)
     json_dict = json.loads(data)
-    print(json_dict['Fuel_data'])
+    # print(json_dict['Fuel_data'])
 
     json_dict2 = json.loads(data2)
 
