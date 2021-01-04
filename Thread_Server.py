@@ -39,5 +39,5 @@ while True:
     start_new_thread(multi_client, (Client, ))
     CarNumber += 1
     print(' Data Collected from CarNumber: ' + str(CarNumber))
-    # call_dijkstra()
+    call_dijkstra()
 ServerSocket.close()
