@@ -26,7 +26,7 @@ def call_dijkstra():
         flag =1
     if dist2 > 50:
         dist2 = -1
-        if flag = 1:
+        if flag == 1:
             flag =12
         else:
             flag = 2
