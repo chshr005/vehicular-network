@@ -17,7 +17,7 @@ def sensors():
 
 
 ClientSocket = socket.socket()
-host = '10.35.70.29'
+host = '10.35.70.12'
 port = 33004
 
 print('Waiting for connection')

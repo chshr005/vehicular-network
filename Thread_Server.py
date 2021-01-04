@@ -1,9 +1,10 @@
 import socket
 import os
 from _thread import *
+import json
 
 ServerSocket = socket.socket()
-host = '10.35.70.29'
+host = '10.35.70.12'
 port = 33004
 CarNumber = 0
 try:
@@ -20,8 +21,10 @@ def multi_client(connection):
     while True:
         data = connection.recv(2048)
         reply = 'Server Says: ' + data.decode('utf-8')
+        data1 = data.decode('utf-8')
+        jsonData = json.loads(data1)
         with open('data.txt', 'w') as outfile:
-            json.dump(data, outfile)
+            json.dump(jsonData, outfile)
         print(reply)
         if not data:
             break

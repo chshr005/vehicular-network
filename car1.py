@@ -21,9 +21,9 @@ while True:
     data = json.dumps(json_dict)
     print(data)
     s.send(data.encode())
-    reply = s.recv(1024)
+   # reply = s.recv(1024)
 	# print(reply)
-    # reply = b'sadas'
+    reply = b'sadas'
     reply1 = reply.decode()
     if reply1 == 'Sensor data not uniform':
         break
