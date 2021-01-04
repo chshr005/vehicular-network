@@ -4,8 +4,8 @@ from _thread import *
 import json
 
 ServerSocket = socket.socket()
-host = '10.35.70.12'
-port = 33004
+host = '10.35.70.29'
+port = 33003
 CarNumber = 0
 try:
     ServerSocket.bind((host, port))
