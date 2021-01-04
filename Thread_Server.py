@@ -25,6 +25,7 @@ def multi_client(connection):
         jsonData = json.loads(data1)
         with open('data.txt', 'a+') as outfile:
             json.dump(jsonData, outfile)
+            outfile.write("\n")
         print(reply)
         if not data:
             break
