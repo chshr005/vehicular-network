@@ -10,6 +10,10 @@ def call_dijkstra():
     data2 = lines[len(lines)-2]
     data = data.replace('\\','')
     data2 = data2.replace('\\', '')
+    data = data.replace('\"{', '{')
+    data2 = data2.replace('\"{', '{')
+    data = data.replace('}\"', '}')
+    data2 = data2.replace('}\"', '}')
 
     print(data)
     print(data2)
@@ -23,12 +27,12 @@ def call_dijkstra():
     name2 =  'CAR2'#json_dict2['id']
     dist = json_dict['Proximity']
     dist2 = json_dict2['Proximity']
-    dist3 = dist2-dist
+    dist3 = round(float(dist2))-round(float(dist))
 
-    if dist > 50:
+    if round(float(dist)) > 50:
         dist = -1
         flag =1
-    if dist2 > 50:
+    if round(float(dist2)) > 50:
         dist2 = -1
         if flag == 1:
             flag =12
