@@ -48,8 +48,10 @@ def call_dijkstra():
 
     if flag ==1:
         car= name
+        print(name, ' not in range')
     elif flag ==2:
         car = name2
+        print(name2, ' not in range')
     elif flag == 12:
         print("All cars out of range")
     else:
