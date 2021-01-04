@@ -58,5 +58,5 @@ def call_dijkstra():
     if flag != 0:
         Dijkstra(graph, car, 'base')
     
-
-call_dijkstra()
+# while True:
+#     call_dijkstra()

@@ -2,6 +2,7 @@ import socket
 import os
 from _thread import *
 import json
+from Integrate import call_dijkstra
 
 ServerSocket = socket.socket()
 host = '10.35.70.12'
@@ -38,4 +39,5 @@ while True:
     start_new_thread(multi_client, (Client, ))
     CarNumber += 1
     print(' Data Collected from CarNumber: ' + str(CarNumber))
+    call_dijkstra()
 ServerSocket.close()
