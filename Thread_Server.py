@@ -23,7 +23,7 @@ def multi_client(connection):
         reply = 'Server Says: ' + data.decode('utf-8')
         data1 = data.decode('utf-8')
         jsonData = json.loads(data1)
-        with open('data.txt', 'w') as outfile:
+        with open('data.txt', 'a+') as outfile:
             json.dump(jsonData, outfile)
         print(reply)
         if not data:
