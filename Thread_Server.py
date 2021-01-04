@@ -28,6 +28,7 @@ def multi_client(connection):
             json.dump(jsonData, outfile)
             outfile.write("\n")
         # print(reply)
+        call_dijkstra()
         if not data:
             break
         connection.sendall(str.encode(reply))
@@ -39,5 +40,5 @@ while True:
     start_new_thread(multi_client, (Client, ))
     CarNumber += 1
     print(' Data Collected from CarNumber: ' + str(CarNumber))
-    call_dijkstra()
+    
 ServerSocket.close()
